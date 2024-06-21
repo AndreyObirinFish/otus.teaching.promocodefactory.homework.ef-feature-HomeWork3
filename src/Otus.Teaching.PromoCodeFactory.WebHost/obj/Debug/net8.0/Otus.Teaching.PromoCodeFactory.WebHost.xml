@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Otus.Teaching.PromoCodeFactory.WebHost</name>
+    </assembly>
+    <members>
+        <member name="T:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController">
+            <summary>
+                Покупатели
+            </summary>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController.GetCustomersAsync">
+            <summary>
+                Получение всех покупателей
+            </summary>
+            <returns>200 + список всех покупателей</returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController.GetCustomerAsync(System.Guid)">
+            <summary>
+                Получение покупателя по его Id
+            </summary>
+            <param name="id">Id искомого покупателя</param>
+            <returns>
+                200 + покупатель или 404,
+                если покупателя по указанномому Id найти не удалось
+            </returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController.CreateCustomerAsync(Otus.Teaching.PromoCodeFactory.WebHost.Models.CreateOrEditCustomerRequest)">
+            <summary>
+                Создание покупателя вместе с его предпочнениями
+            </summary>
+            <param name="request">Информация о покупателе и список id на препочтения</param>
+            <returns>200 + Id новой записи</returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController.EditCustomersAsync(System.Guid,Otus.Teaching.PromoCodeFactory.WebHost.Models.CreateOrEditCustomerRequest)">
+            <summary>
+                Обновление покупателя и его предпочтений
+            </summary>
+            <param name="id">Id лица, которое надо обновить</param>
+            <param name="request">Обновленные данные</param>
+            <returns>
+                200 - если лицо удалось обновить
+                404 - лицо не найдено
+            </returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.CustomersController.DeleteCustomer(System.Guid)">
+            <summary>
+                Удаление покупателя и его промокодов
+            </summary>
+            <param name="id">Id лица, которого надо удалить</param>
+            <returns>
+                200 - если удаление прошло успешно
+                404 - если лицо не найдено
+            </returns>
+        </member>
+        <member name="T:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.EmployeesController">
+            <summary>
+            Сотрудники
+            </summary>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.EmployeesController.GetEmployeesAsync">
+            <summary>
+            Получить данные всех сотрудников
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.EmployeesController.GetEmployeeByIdAsync(System.Guid)">
+            <summary>
+            Получить данные сотрудника по id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.PreferncesController">
+            <summary>
+                Конроллер по работе с препдочтениями клиентов
+            </summary>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.PreferncesController.GetPreferencesAsync">
+            <summary>
+                Получение всех предпочтений
+            </summary>
+            <returns>200 + список всех предпочтений в бд</returns>
+        </member>
+        <member name="T:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.PromocodesController">
+            <summary>
+                Промокоды
+            </summary>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.PromocodesController.GetPromocodesAsync">
+            <summary>
+                Получить все промокоды
+            </summary>
+            <returns>200 + список всех промокодов</returns>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.PromocodesController.GivePromoCodesToCustomersWithPreferenceAsync(Otus.Teaching.PromoCodeFactory.WebHost.Models.GivePromoCodeRequest)">
+            <summary>
+                Создать промокод и выдать его клиентам с указанным предпочтением
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.RolesController">
+            <summary>
+            Роли сотрудников
+            </summary>
+        </member>
+        <member name="M:Otus.Teaching.PromoCodeFactory.WebHost.Controllers.RolesController.GetRolesAsync">
+            <summary>
+            Получить все доступные роли сотрудников
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
